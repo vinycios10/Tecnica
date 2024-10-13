@@ -30,18 +30,18 @@ void InvPar(char *vet, int n, int i){
 
 }
 
-main(){
+int main(void){
 	int i=0, n; 
 	char vet[]={"san diego"};
 	
-		n=sizeof(vet)/sizeof(vet[0]);	//tamanho da string
+	n=sizeof(vet)/sizeof(vet[0]);	//calcula o tamanho da string
 		
-		if(n%2)                         //tamanho impar
-			InvImp(vet, n, i);
-		else                            //tamanho par
-			InvPar(vet, n, i);
-			
-		for(; i<n; i++)
-			printf(" %c", vet[i]);
+	if(n%2)                         //tamanho impar
+		InvImp(vet, n, i);
+	else                            //tamanho par
+		InvPar(vet, n, i);
+	
+	for(; i<n; i++)                 //imprime a string invertida
+		printf(" %c", vet[i]);
 	return 0;
 }
